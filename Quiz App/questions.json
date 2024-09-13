@@ -1,0 +1,17 @@
+[
+  {
+      "question": "What is the capital of France?",
+      "options": ["Paris", "Madrid", "Berlin", "Rome"],
+      "correctAnswer": "Paris"
+  },
+  {
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+      "correctAnswer": "Jupiter"
+  },
+  {
+      "question": "What is the smallest prime number?",
+      "options": ["1", "2", "3", "5"],
+      "correctAnswer": "2"
+  }
+]

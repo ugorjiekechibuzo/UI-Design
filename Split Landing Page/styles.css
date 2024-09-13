@@ -1,0 +1,138 @@
+:root{
+  --left-color: rgba(87, 84, 236, 0.8);
+  --right-color: rgba(43, 43, 43, 0.7);
+  --left-btn-color-hover: rgba(87, 84, 236, 1);
+  --right-btn-color-hover: rgba(28, 122, 28, 1);
+  --hover-width: 75%;
+  --other: 25%;
+  --speed: 1000ms;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1{
+  font-size:4rem;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.btn{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border: var(--left-color) solid 2px;
+}
+
+.left .btn:hover{
+  background: var(--left-btn-color-hover);
+  border-color: var(--left-btn-color-hover);
+}
+
+.right .btn:hover{
+  background: var(--right-btn-color-hover);
+  border-color: var(--right-btn-color-hover);
+}
+
+.container{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+.split{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.left{
+  left: 0;
+  background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center / cover;
+  color: #fff;
+  z-index: 1;
+}
+
+.left::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--left-color);
+}
+
+
+.right{
+  right: 0;
+  background: url('img\ 2.jpg') no-repeat center / cover;
+  color: #333;
+}
+
+.right::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--right-color);
+}
+
+.split.right,.split.left,.split-right::before, .split-left::before{
+  transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left{
+  width: var(--hover-width);
+}
+
+.hover-left .right{
+  width: var(--other);
+}
+
+.hover-right .right{
+  width: var(--hover-width);
+}
+
+.hover-right .left{
+  width: var(--other);
+}
+
+
+@media (max-width: 768px){
+  h1{
+    font-size: 2rem;
+    top:30%;
+  }
+
+  .btn{
+    font-size: 1rem;
+    padding: 1.2rem;
+    width: 12rem;
+  }
+}

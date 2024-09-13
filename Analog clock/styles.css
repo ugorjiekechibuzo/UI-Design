@@ -1,0 +1,89 @@
+body{
+  background: linear-gradient(45deg, #333, #d12929);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.clock{
+  width: 30rem;
+  height: 30rem;
+  border: 10px solid #282828;
+  border-radius: 50%;
+  position: relative;
+  margin: 50px auto;
+  box-shadow: -4px -4px rgba(67 , 67, 67, 0.6), inset 4px 4px 10px rgba(0,0,0,0.5),
+              4px 4px 15px rgba(0,0,0,0.6), inset -4px -4px 15px rgba(0,0,0,0.6);
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  background-image: url('bathroom.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.center-dot{
+  width: 1rem;
+  height: 1rem;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.number{
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.number-1{ top: 10%; left: 50%; transform: translate(-50%, -50%);}
+.number-2{top: 11%; left: 73%; transform: translate(-50%, -50%);}
+.number-3{top: 30%;left: 85%; transform: translate(-50%, -50%);}
+.number-4{ top: 50%; left: 90%; transform: translate(-50%, -50%);}
+.number-5{ top: 70%;  left: 85%; transform: translate(-50%, -50%);}
+.number-6{top: 85%; left: 70%; transform: translate(-50%, -50%);}
+.number-7{ top: 90%;left: 50%; transform: translate(-50%, -50%);}
+.number-8{ top: 85%; left: 30%; transform: translate(-50%, -50%);}
+.number-9{ top: 70%; left: 15%; transform: translate(-50%, -50%);}
+.number-10{ top: 50%; left: 10%; transform: translate(-50%, -50%);}
+.number-11{ top: 30%; left: 15%; transform: translate(-50%, -50%);}
+.number-12{ top: 13%; left: 30%; transform: translate(-50%, -50%);}
+
+.number-1, .number-4, .number-7, .number-10{
+  font-size: 2rem;
+  color: green;
+}
+
+.hand{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 50% 100%;
+  background-color: #333;
+  transform: translate(-50%, -100%) ;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);;
+}
+
+.hour-hand{
+  width: 8px;
+  height: 40%;
+  border-radius: 10px 10px 0 0;
+}
+
+.minute-hand{
+  width: 6px;
+  height: 50%;
+  border-radius: 10px 10px 0 0;
+}
+
+.second-hand{
+  width: 4px;
+  height: 55%;
+  border-radius: 10px 10px 0 0;
+  background-color: #ff0000;
+  z-index: 2;
+}
