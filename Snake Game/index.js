@@ -145,7 +145,7 @@ function startGame() {
       gameOver = true;
     }
   }
-  console.log(html);
+  
   playBorder.innerHTML = html;
 }
 
