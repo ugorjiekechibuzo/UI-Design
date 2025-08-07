@@ -1,5 +1,5 @@
 
-const API_KEY = 'KEY HERE';
+
 
 
 const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${API_KEY}&page=1`;
@@ -17,6 +17,7 @@ async function getMovies(url)
 {
   const res = await fetch(url);
   const data = await res.json();
+  console.log(data.results)
 
   showMovies(data.results);
 
