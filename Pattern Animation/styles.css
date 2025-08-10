@@ -1,0 +1,41 @@
+:root {
+  --primary: #ffffff;
+  --secondary: #94a1fb;
+  --background: #0f2b46;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, var(--secondary) 0%, var(--background) 100%);
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  --minFontSize: 2rem;
+  --maxFontSize: calc(var(--minFontSize) * 8);
+  --scaler: 20vw;
+  font-family: "Moderat", sans-serif;
+  font-size: clamp(var(--minFontSize),  var(--scaler), var(--maxFontSize));
+  color: var(--primary);
+  background: url(https://mereton.com.au/wp-content/uploads/2016/12/Daisy-Leaf-Marine.jpg);
+  filter: drop-shadow(0.75rem 0 0.75rem black);
+  background-size: auto 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: carman 8s infinite linear;
+}
+
+@keyframes carman {
+  0% {
+    background-position: center 0;
+  }
+  100% {
+    background-position: center 200%;
+  }
+}
